@@ -1,0 +1,10 @@
+Crear una clase Junit y añadirla a la suit AllTests. 
+
+La JUnit testeará el funcionamiento de la operación SumaValorAbsolutoOperación. 
+Para ello se requiere que se hagan los @Test necesarios para cubrir el 100% de los caminos 
+de ejecución
+Si hubiera que capturar alguna excepción hacerlo de 2 maneras distintas 
+y en una de ellas verificar que el mensaje generado es correcto
+
+Se recomienda el uso de LOGGER de sl4j. 
+private static final Logger LOGGER = LoggerFactory.getLogger(MyTestCase.class); 

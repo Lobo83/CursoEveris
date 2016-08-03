@@ -1,0 +1,4 @@
+Crear una clase Junit y añadirla a la suit AllTests. 
+La clase debe hacer algo en cada momento del ciclo de vida de la junit.
+Se recomienda el uso de LOGGER de sl4j. 
+private static final Logger LOGGER = LoggerFactory.getLogger(MyTestCase.class); 

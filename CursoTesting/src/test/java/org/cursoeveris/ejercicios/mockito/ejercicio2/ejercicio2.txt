@@ -1,0 +1,14 @@
+Crear una clase Junit y añadirla a la suit AllTests. 
+
+La clase debe tener un método @Test y fuera de este metodo instanciar una operacion SumaValorAbsolutoOperacion 
+y crear un mock para la dependencia. 
+No se permite usar el operador new para instanciar SumaValorAbsolutoOperacion
+
+Configurar 2 comportamientos para el mock de la dependencia para que devuelvan valores distintos
+Invocar 2 veces a SumaValorAbsolutoOperacion.operar haciendo que pase siempre por 
+la operación de la dependencia.
+Verificar que en ambas invocaciones se obtiene siempre el valor que se le ha configurado al mock.
+
+
+Se recomienda el uso de LOGGER de sl4j. 
+private static final Logger LOGGER = LoggerFactory.getLogger(MyTestCase.class); 

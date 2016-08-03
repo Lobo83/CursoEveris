@@ -1,0 +1,15 @@
+Crear una clase Junit y añadirla a la suit AllTests. 
+
+La clase debe instanciar fuera de cualquier metodo test una operacion SumaValorAbsolutoOperacion 
+y crear un mock para la dependencia. 
+No se permite usar el operador new para instanciar SumaValorAbsolutoOperacion
+
+La clase debe pasar por 1 camino que pase por la invocación a la dependencia
+
+Configurar comportamiento para el mock de la dependencia para que realice una funcionalidad real. No se permite usar @Spy ni Mockito.spy
+
+Hacer tantos métodos @Test como sean necesarios para tratar las excepciones lanzadas de 2 maneras distintas
+ y que ningún método @Test falle
+
+Se recomienda el uso de LOGGER de sl4j. 
+private static final Logger LOGGER = LoggerFactory.getLogger(MyTestCase.class); 

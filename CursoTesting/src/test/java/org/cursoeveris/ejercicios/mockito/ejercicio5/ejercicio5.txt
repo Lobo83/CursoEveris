@@ -1,0 +1,12 @@
+Crear una clase Junit y añadirla a la suit AllTests. 
+
+La clase debe tener un método @Test y fuera de este metodo instanciar una operacion SumaValorAbsolutoOperacion 
+y crear un mock para la dependencia con @Spy. 
+
+Configurar algún comportamiento para el mock de la dependencia para que devuelva un valor
+La ejecución de la prueba debe pasar por la ejecución de la operación mockeada
+
+Verificar que se ha invocado a la operación del mock al menos una vez
+
+Se recomienda el uso de LOGGER de sl4j. 
+private static final Logger LOGGER = LoggerFactory.getLogger(MyTestCase.class); 
