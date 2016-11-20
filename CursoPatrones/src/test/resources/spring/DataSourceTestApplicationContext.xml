@@ -24,6 +24,7 @@
 	<jdbc:initialize-database data-source="dataSource"
 		ignore-failures="DROPS">
 		<jdbc:script location="classpath:schema_h2.sql" />
+		<jdbc:script location="classpath:data_h2.sql" />
 	</jdbc:initialize-database>
 
 
