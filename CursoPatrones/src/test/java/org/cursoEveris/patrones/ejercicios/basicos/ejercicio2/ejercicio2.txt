@@ -1,0 +1,1 @@
+Combinar el singleton anterorior con un patrón factory.

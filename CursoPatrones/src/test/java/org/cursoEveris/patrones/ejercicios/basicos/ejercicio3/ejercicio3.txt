@@ -1,0 +1,1 @@
+utilizando el patron command encapsular llamadas a base de datos de manera que se tengan ordenes para obtener clientes y direcciones por id

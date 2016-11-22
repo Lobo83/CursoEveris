@@ -1,0 +1,3 @@
+Utilizar patron Fachada y Builder para obtener una estructura VO con los datos del Cliente y los datos de su Direccion dado un ID de Cliente
+(No vale usar ClienteVO y DireccionVO como atributos del VO resultante)
+Los datos deben venir de la base de datos. Para esto se puede utilizar el encapsulado de tareas.

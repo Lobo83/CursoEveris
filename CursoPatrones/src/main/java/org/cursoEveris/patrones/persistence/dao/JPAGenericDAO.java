@@ -2,11 +2,12 @@ package org.cursoEveris.patrones.persistence.dao;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.FlushModeType;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
+import org.cursoEveris.patrones.persistence.parameter.Parameter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -101,9 +102,21 @@ public class JPAGenericDAO<T> {
 
 	
 	
-
-
-	
+/**
+ * Método para realizar consultas sobre una entidad via JPQL
+ * @param query
+ * @param parameters
+ * @return
+ */
+	public List<T> executeQueryByCriteria(String query, Parameter... parameters){
+		
+		 TypedQuery<T> typedQuery = this.entityManager.createQuery(query, this.entidad);
+		for(Parameter parameter:parameters){
+			typedQuery.setParameter(parameter.getNombre(), parameter.getValor());
+		}
+		
+		return typedQuery.getResultList();
+	}
 	
 	
 }

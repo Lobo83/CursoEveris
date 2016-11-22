@@ -1,0 +1,1 @@
+Hacer un objeto singleton. No tiene por qué star relacionado con el material provisto

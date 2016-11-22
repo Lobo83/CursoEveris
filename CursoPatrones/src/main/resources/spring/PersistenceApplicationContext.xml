@@ -13,6 +13,8 @@
   http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
 
 	<bean id="jpaClienteDAO" class="org.cursoEveris.patrones.persistence.dao.JPAClienteDAO"/>
+	<bean id="jpaDireccionDAO" class="org.cursoEveris.patrones.persistence.dao.JPADireccionDAO"/>
+	
 
 
 </beans>

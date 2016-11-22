@@ -1,32 +1,17 @@
-package org.cursoEveris.patrones.persistence.entity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+package org.cursoEveris.patrones.business.vo;
 
 import org.cursoEveris.patrones.business.mapper.annotation.MappingId;
 
-@Entity
-@Table(name="CLIENTE")
-public class Cliente {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="ID", unique=true, nullable=false, precision=9)
+public class ClienteVO {
 	@MappingId(id="id")
 	private Long id;
 	
-	@Column(name="NOMBRE")
 	@MappingId(id="nombre")
 	private String nombre;
 	
-	@Column(name="APELLIDO1")
 	@MappingId(id="apellido1")
 	private String apellido1;
 	
-	@Column(name="APELLIDO2")
 	@MappingId(id="apellido2")
 	private String apellido2;
 
@@ -63,6 +48,12 @@ public class Cliente {
 	}
 
 	@Override
+	public String toString() {
+		return "ClienteVO [id=" + id + ", nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2=" + apellido2
+				+ "]";
+	}
+
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -81,7 +72,7 @@ public class Cliente {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Cliente other = (Cliente) obj;
+		ClienteVO other = (ClienteVO) obj;
 		if (apellido1 == null) {
 			if (other.apellido1 != null)
 				return false;
@@ -105,13 +96,5 @@ public class Cliente {
 		return true;
 	}
 
-	@Override
-	public String toString() {
-		return "Cliente [id=" + id + ", nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2=" + apellido2
-				+ "]";
-	}
-	
-	
-	
 	
 }
